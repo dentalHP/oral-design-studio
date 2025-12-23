@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Design Portfolio | 現場を知るDHが作るHP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Loading Animation (Simple) -->
+    <div id="loader"></div>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">DH.Design</div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+       <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="line-art reveal">
+            <!-- 抽象的な歯のシルエットやラインをイメージしたSVG -->
+            <svg viewBox="0 0 100 100" class="main-svg">
+                <path d="M50 10 Q 70 10 75 40 T 50 90 T 25 40 T 50 10" fill="none" stroke="#8e9da2" stroke-width="0.5"/>
+                <circle cx="50" cy="45" r="15" fill="none" stroke="#b8a99a" stroke-width="0.8"/>
+            </svg>
+        </div>
+        
+        <!-- ここを新しい文言に差し替え -->
+        <h1 class="reveal-text">INSIGHT DENTAL<br>DESIGN STUDIO.</h1>
+        
+        <p class="sub-text reveal">現場を知るからこそ描ける、<br>歯科医院の「本当の魅力」。</p>
+    </div>
+</section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span class="en">01. About Me</span>
+                    <h2>現場と経営、両方の視点から。</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>私は現役の歯科衛生士として現場に立ちながら、歯科専門の採用代行会社でも勤務しています。</p>
+                        <p>「患者様が通いたくなる安心感」と「スタッフが働きたくなる魅力」。<br>
+                        その両方を、歯科の言葉で、正しく美しくデザインに落とし込みます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Section -->
+        <section id="service" class="service section">
+    <div class="container">
+        <div class="section-label reveal">02. Service</div>
+        <div class="service-grid">
+            
+            <!-- Card 1: Smart Production -->
+            <div class="service-item reveal">
+                <div class="icon-wrap">
+                    <!-- スマホとWebをイメージした細線アイコン -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <h3>Smart Production</h3>
+                <p>
+                    高品質なテンプレートをベースに、十分な情報量（ボリューム）を担保したサイトを構築。
+                    契約から納品までスマホひとつで完結するため、場所を選ばずスムーズに進行が可能です。
+                </p>
+            </div>
+
+            <!-- Card 2: Insight Direction -->
+            <div class="service-item reveal">
+                <div class="icon-wrap">
+                    <!-- テキストヒアリングと現場視点をイメージした細線アイコン -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        <line x1="8" y1="9" x2="16" y2="9"></line>
+                        <line x1="8" y1="13" x2="14" y2="13"></line>
+                    </svg>
+                </div>
+                <h3>Insight Direction</h3>
+                <p>
+                    忙しい院長の手を煩わせないよう、ヒアリングはLINE等のテキストベースで効率的に実施。
+                    現役DHの視点で専門用語や現場の空気を汲み取り、貴院に最適なトーン＆マナーを提案します。
+                </p>
+            </div>
+
+        </div>
+    </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-inner reveal">
+                    <h2>Contact</h2>
+                    <p>無料相談・お見積りなど、お気軽にご連絡ください。</p>
+                    <a href="mailto:example@mail.com" class="contact-btn">お問い合わせを送る</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Dental Design Studio. Based in Japan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
