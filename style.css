@@ -270,3 +270,167 @@ footer {
     .service-cards { grid-template-columns: 1fr; }
     h1 { font-size: 2rem; }
 }
+/* --- Additional Sections (About/Works/Price/Flow) --- */
+
+/* About Strength */
+.strength-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.strength-item {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-left: 1px solid var(--accent-color);
+}
+
+.strength-tag {
+    font-family: var(--font-en);
+    font-size: 0.7rem;
+    color: var(--accent-color);
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Works */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.work-item {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.4s;
+}
+
+.work-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--line-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.work-placeholder {
+    font-family: var(--font-en);
+    font-size: 0.8rem;
+    color: var(--sub-text);
+}
+
+.work-item h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.work-item p {
+    font-size: 0.8rem;
+    color: var(--sub-text);
+}
+
+.work-item:hover {
+    transform: translateY(-5px);
+    opacity: 0.8;
+}
+
+/* Price Card */
+.price-card {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--line-color);
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.price-header h3 {
+    font-family: var(--font-en);
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.price-amount {
+    font-family: var(--font-en);
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.price-amount span {
+    font-size: 0.9rem;
+    font-family: var(--font-jp);
+}
+
+.price-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    display: inline-block;
+    text-align: left;
+}
+
+.price-features li {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: var(--main-text);
+}
+
+.price-features li::before {
+    content: "•";
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.price-note {
+    font-size: 0.75rem;
+    color: var(--sub-text);
+}
+
+/* Workflow Flow */
+.flow-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.flow-item {
+    position: relative;
+    padding-top: 40px;
+}
+
+.step {
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 300;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.flow-item h4 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.flow-item p {
+    font-size: 0.85rem;
+    color: var(--sub-text);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .strength-grid, .flow-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .price-card {
+        padding: 40px 20px;
+    }
+}
