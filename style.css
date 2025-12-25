@@ -76,11 +76,51 @@ nav a {
     text-align: center;
 }
 
+/* 最初の回転アニメーションを定義 */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .main-svg {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 40px;
+    /* 20秒かけて一周、等速で無限に回転 */
     animation: rotate 20s linear infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 念のためタイトルのドットも追加 */
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #1a1a1a;
+}
+
+/* --- .sub-text（説明文）を探して書き換え --- */
+.sub-text {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 2;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+/* --- .main-svg（アイコン）を探して書き換え --- */
+.main-svg {
+    width: 80px; /* 少し小さめにすることで、より高級感が出ます */
+    height: 80px;
+    margin-bottom: 50px;
+    /* 20秒かけてゆっくり、等速で回転 */
+    animation: rotate 20s linear infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes rotate {
@@ -88,26 +128,9 @@ nav a {
     to { transform: rotate(360deg); }
 }
 
-h1 {
-    font-family: 'Quicksand', sans-serif; /* 丸みのあるモダンなフォント */
-    font-size: clamp(2.2rem, 7vw, 4rem);
-    font-weight: 300; /* 細いウェイトにすることで高級感が出ます */
-    line-height: 1.1;
-    letter-spacing: 0.15em; /* 文字間隔を広げると「余白」が活きます */
-    margin-bottom: 24px;
-    text-transform: uppercase; /* 全て大文字にするとデザイン性が高まります */
-}
-
-/* 「.」だけ色を変えるなど、遊び心を加えてもいいかもしれません */
-h1::after {
-    content: ".";
-    color: var(--accent-color);
-}
-
-.sub-text {
-    color: var(--sub-text);
-    font-weight: 300;
-    font-size: 0.95rem;
+/* 右下のキラキラは、この抽象アイコンと相性が非常に良いので残すのがおすすめです */
+.bottom-sparkle {
+    opacity: 0.5; /* 少し薄くするとより馴染みます */
 }
 
 /* Sections */
@@ -432,5 +455,86 @@ footer {
     }
     .price-card {
         padding: 40px 20px;
+    }
+}
+/* --- 右下のキラキラマークの設定（追記） --- */
+.hero {
+    position: relative; /* キラキラを配置するための基準 */
+}
+
+.bottom-sparkle {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+}
+
+/* スマホでは位置を少し調整 */
+@media (max-width: 768px) {
+    .bottom-sparkle {
+        bottom: 20px;
+        right: 20px;
+        width: 20px;
+    }
+}
+/* --- アニメーション設定（最初の回転する動きを復活） --- */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.main-svg {
+    width: 100px; /* お写真のサイズ感に調整 */
+    height: 100px;
+    margin-bottom: 40px;
+    /* 最初のアニメーション設定を適用 */
+    animation: rotate 20s linear infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- タイトルの文字設定（お写真の再現） --- */
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0.15em;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+/* --- サブテキストの文字設定 --- */
+.sub-text {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 2;
+    font-weight: 400;
+}
+
+/* --- 右下のキラキラ配置 --- */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom-sparkle {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 35px;
+    height: 35px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .bottom-sparkle {
+        bottom: 20px;
+        right: 20px;
+        width: 25px;
     }
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dental Design Portfolio | 現場を知るDHが作るHP</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=1.0.1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
@@ -29,18 +29,55 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <div class="line-art reveal">
-                    <svg viewBox="0 0 100 100" class="main-svg">
-                        <path d="M50 10 Q 70 10 75 40 T 50 90 T 25 40 T 50 10" fill="none" stroke="#a7b3b7" stroke-width="0.5"/>
-                        <circle cx="50" cy="45" r="15" fill="none" stroke="#d8d2cc" stroke-width="0.8"/>
-                    </svg>
-                </div>
-                <h1 class="reveal-text">INSIGHT DENTAL<br>DESIGN STUDIO.</h1>
-                <p class="sub-text reveal">現場を知るからこそ描ける、<br>歯科医院の「本当の魅力」。</p>
-            </div>
-        </section>
+<section class="hero">
+    <div class="hero-content">
+        <!-- 歯のアイコン：お写真の細身で綺麗なフォルムを再現 -->
+        <div class="line-art reveal">
+            <svg viewBox="0 0 100 100" class="main-svg">
+    <!-- 外側の細い円（ベース） -->
+    <circle cx="50" cy="50" r="45" 
+            fill="none" 
+            stroke="var(--line-color)" 
+            stroke-width="0.5" 
+            opacity="0.5" />
+    
+    <!-- 中間の弧（アクセント）：デザインの動きを強調 -->
+    <path d="M50,5 A45,45 0 0,1 95,50" 
+          fill="none" 
+          stroke="var(--accent-color)" 
+          stroke-width="1.2" 
+          stroke-linecap="round" />
+    
+    <!-- 内側の円：核となる「INSIGHT（視点）」を表現 -->
+    <circle cx="50" cy="50" r="12" 
+            fill="none" 
+            stroke="var(--accent-color)" 
+            stroke-width="1" />
+            
+    <!-- 中心を通る水平ライン：均衡と設計を表現 -->
+    <line x1="30" y1="50" x2="70" y2="50" 
+          stroke="var(--accent-color)" 
+          stroke-width="0.8" />
+</svg>
+        </div>
+        
+        <!-- メインタイトル：お写真通りの改行とドット -->
+        <h1 class="reveal-text">INSIGHT DENTAL<br>DESIGN STUDIO..</h1>
+        
+        <!-- サブテキスト：お写真通りの文言 -->
+        <p class="sub-text reveal">
+            現場を知るからこそ描ける、<br>
+            歯科医院の「本当の魅力」。
+        </p>
+    </div>
+
+    <!-- 右下のキラキラマーク -->
+    <div class="bottom-sparkle">
+        <svg viewBox="0 0 24 24" fill="#d1d1d1">
+            <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+        </svg>
+    </div>
+</section>
 
         <!-- About Section (精査版) -->
         <section id="about" class="about section">
