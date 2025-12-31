@@ -231,7 +231,37 @@ h1 {
     color: var(--sub-text);
     text-align: justify;
 }
+.browser-mockup {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
+.browser-header {
+  background: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.browser-header .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #bbb;
+}
+
+.browser-body {
+  height: 500px; /* スクロール領域の高さ */
+}
+
+.browser-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 /* スマホ表示の調整 */
 @media (max-width: 768px) {
     .service-grid {
@@ -537,4 +567,17 @@ h1 {
         right: 20px;
         width: 25px;
     }
+}
+/* フォームの囲い枠をレスポンシブにする */
+.form-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* スマホではフォームを少し長めにする（入力項目が縦に並ぶため） */
+@media (max-width: 768px) {
+  .form-container iframe {
+    height: 1000px; /* スマホで見切れる場合はこの数字を大きくしてください */
+  }
 }
